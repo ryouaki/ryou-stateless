@@ -21,7 +21,7 @@ function subscribe (event, handle) {
   return function unSubscribe() {
     var index = listener[event].indexOf(handle);
     if (index > -1) {
-      listener.splice(index, 1);
+      listener[event].splice(index, 1);
     }
   }
 }
